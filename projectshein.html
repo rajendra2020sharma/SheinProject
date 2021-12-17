@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            font-family: sans-serif;
+            box-sizing: border-box;
+
+        }
+
+        /* .one {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            background-color: #f7f8fa;
+            border: 1px solid transparent;
+        }
+
+        .one_one {
+            width: 33%;
+            display: flex;
+            border: 1px solid transparent;
+            margin-top: 20px;
+        }
+
+        .one_two {
+            width: 20%;
+            margin-left: 300px;
+            font-size: 50px;
+            font-weight: bolder;
+            border: 1px solid transparent;
+            margin-top: 2px;
+            letter-spacing: 5px;
+            cursor: pointer;
+            font-family: 'Fjalla One', sans-serif;
+        }
+
+        .one_three {
+            width: 50%;
+            border: 1px solid transparent;
+            display: flex;
+        }
+
+        .second {
+            display: flex;
+            height: 50px;
+            margin-top: 25px;
+            font-weight: 500;
+            border: 1px solid transparent;
+            color: rgb(46, 44, 44);
+            text-align: center;
+            margin-left: 10px;
+        } */
+
+        .return {
+            display: flex;
+            border: 1px solid transparent;
+            width: 95%;
+            margin: auto;
+            height: 55px;
+            color: #373737;
+            background-color: #ededed;
+
+        }
+
+        .return>div:nth-child(1) {
+            width: 25%;
+            font-size: small;
+            border: 1px solid transparent;
+            text-align: center;
+            margin-top: 8px;
+            font-weight: 600;
+            border-right: 2px solid black;
+
+        }
+
+        .return>div:nth-child(2) {
+            width: 25%;
+            font-size: small;
+            border: 1px solid transparent;
+            text-align: center;
+            margin-top: 8px;
+            font-weight: 600;
+            border-right: 2px solid black;
+
+
+        }
+
+        .return>div:nth-child(3) {
+            width: 25%;
+            font-size: small;
+            border: 1px solid transparent;
+            text-align: center;
+            margin-top: 8px;
+            font-weight: 600;
+            border-right: 2px solid black;
+        }
+
+        .return>div:nth-child(4) {
+            width: 25%;
+            font-size: small;
+            text-align: center;
+            border: 1px solid transparent;
+
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        .category {
+            display: grid;
+
+            margin-top: 20px;
+            height: 400px;
+            grid-template-columns: 350px 350px 350px 350px 350px;
+            grid-template-rows: 200px 150px;
+            background-color: red;
+            grid-gap: 20px;
+            cursor: pointer;
+            grid-template-areas:
+                "a b c d e"
+                "f g h i j"
+
+            ;
+        }
+
+        .a {
+            grid-area: a;
+            border: 1px solid transparent;
+            margin-top: 50px;
+
+            margin-left: 24px;
+        }
+
+        .b {
+            grid-area: b;
+            border: 1px solid transparent;
+            margin-top: 50px;
+            margin-left: 24px;
+
+
+
+        }
+
+        .c {
+            grid-area: c;
+            border: 1px solid transparent;
+            margin-top: 50px;
+            margin-left: 24px;
+
+        }
+
+        .d {
+            grid-area: d;
+            margin-left: 24px;
+            border: 1px solid transparent;
+            margin-top: 50px;
+
+        }
+
+        .e {
+            grid-area: e;
+            border: 1px solid transparent;
+            margin-top: 50px;
+            margin-left: 24px;
+        }
+
+        .f {
+            grid-area: f;
+            border: 1px solid transparent;
+            margin-left: 24px;
+        }
+
+        .g {
+            grid-area: g;
+            border: 1px solid transparent;
+            margin-left: 24px;
+        }
+
+        .h {
+            grid-area: h;
+            border: 1px solid transparent;
+            margin-left: 24px;
+        }
+
+        .i {
+            grid-area: i;
+            border: 1px solid transparent;
+            margin-left: 24px;
+        }
+
+        .j {
+            grid-area: j;
+            border: 1px solid transparent;
+            margin-left: 24px;
+        }
+
+        input:hover {
+            background-color: rgb(194, 212, 206);
+        }
+
+        .second>div:nth-child(13)>div:nth-child(2)>i:hover {
+            background-color: rgb(151, 131, 131);
+        }
+
+        .third {
+            height: 350px;
+            width: 95%;
+            margin: auto;
+            background-size: cover;
+            cursor: pointer;
+            background-image: url("https://img.ltwebstatic.com/images3_ach/2021/12/06/16387739190f20350d0b5fe823cd62bdff509aa40c.jpg");
+        }
+
+        .fourth {
+            width: 95%;
+            margin: auto;
+            background-color: #e00404;
+            height: 450px;
+        }
+
+        .fourth_one {
+            display: flex;
+            height: 15%;
+            border: 1px solid transparent;
+        }
+
+        .fourth_one_one {
+            width: 50%;
+            font-size: 40px;
+            font-weight: bolder;
+            color: white;
+            margin-left: 25px;
+
+        }
+
+        .fourth_one_two {
+            width: 50%;
+            font-size: 40px;
+            text-align: right;
+            font-weight: bolder;
+            color: white;
+            margin-right: 25px;
+        }
+
+        .fourth_two {
+            display: flex;
+            height: 80%;
+            border: 1px solid transparent;
+            justify-content: space-around;
+            cursor: pointer;
+        }
+
+        .five {
+            display: flex;
+            width: 95%;
+            margin: auto;
+            height: 480px;
+            border: 1px solid transparent;
+            justify-content: space-around;
+            margin-top: 20px;
+
+        }
+
+        .six {
+
+            height: 70px;
+            border: 1px solid transparent;
+            display: flex;
+            margin-bottom: 100px;
+            border-radius: 10px;
+        }
+
+        .seven {
+            display: flex;
+            background-color: #f7f8fa;
+            border: 1px solid transparent;
+            height: 550px;
+            justify-content: space-around;
+            width: 95%;
+            margin: auto;
+            cursor: pointer;
+
+        }
+
+        button {
+            width: 80%;
+            height: 15px;
+            background-color: black;
+            color: white;
+            padding: 20px 30px 40px 30px;
+            margin-top: 5px;
+            font-size: larger;
+            font-weight: 700;
+            cursor: pointer;
+            border-radius: 30px;
+
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+            font-weight: bolder;
+        }
+
+        .eight {
+
+            display: flex;
+            height: 520px;
+            border: 1px solid transparent;
+            width: 95%;
+            margin: auto;
+            justify-content: space-around;
+            background-color: #e1e7cc;
+        }
+
+        .eight>div {
+            margin-top: 45px;
+        }
+
+        div>div>img {
+            cursor: pointer;
+        }
+
+        .last_image {
+            height: 650px;
+            width: 95%;
+            margin: auto;
+            border: 1px solid transparent;
+        }
+
+        .gallery {
+            display: flex;
+            height: 500px;
+            width: 96%;
+            border: 1px solid transparent;
+            margin: auto;
+            justify-content: space-around;
+        }
+
+        .dibba {
+            display: flex;
+            border: 1px solid transparent;
+            height: 100px;
+
+
+            margin-top: 30px;
+        }
+
+        .dibba>div>button {
+            border-radius: 50px;
+        }
+    </style>
+
+    <title>Shein</title>
+    <script src="https://kit.fontawesome.com/4eb5576e62.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- <div class="one">
+        <div class="one_one">
+            <div style="font-size: larger;"><a href="">WOMEN</a></div>
+            <div style="margin-left: 15px;font-size: larger;cursor: pointer;border: 1px solid transparent;"><a
+                    href="">CURVE+PLUS</a>
+            </div>
+            <div style="margin-left: 15px;font-size: larger;cursor: pointer;border: 1px solid transparent;"><a
+                    href="">KIDS</a></div>
+            <div style="margin-left: 15px;font-size: larger;cursor: pointer;border: 1px solid transparent;"><a
+                    href="">MEN</a></div>
+            <div style="margin-left: 15px;font-size: larger;cursor: pointer;border: 1px solid transparent;"><a
+                    href="">BEAUTY</a></div>
+            <div style="margin-left: 15px;font-size: larger;cursor: pointer;border: 1px solid transparent;"><a
+                    href="">HOME+PETS</a>
+            </div>
+        </div>
+        <div class="one_two">SHEIN</div>
+        <div class="one_three">
+            <div style="width: 70%;">
+                <p style="font-size: 14px; margin-top: 20px;cursor: pointer;">Free Standard shipping <span
+                        style="color: red"> orders
+                        above
+                        US$49.00</span></p>
+            </div>
+            <div class="abc" style="width: 6%;margin-top: 20px;font-size: large;cursor:pointer;"><a href=""><i
+                        class="fas fa-user"></i></a></div>
+            <div style="width: 6%;margin-top: 20px;font-size: large;cursor:pointer;"><a href=""><i
+                        class="fas fa-shopping-bag"></i></a>
+            </div>
+            <div style="width: 6%;margin-top: 20px;font-size: large;cursor:pointer;"><a href=""><i
+                        class="far fa-heart"></i></a></div>
+            <div style="width: 6%;margin-top: 20px;font-size: large;cursor:pointer;"><a href=""><i
+                        class="fas fa-headphones-alt"></i></a></div>
+            <div style="width: 6%;margin-top: 20px;font-size: large;cursor:pointer;"><a href=""><i
+                        class="fas fa-globe"></i></a></div>
+
+        </div>
+    </div>
+    <div class="second">
+        <div style="width: 6.5%;font-size: small;cursor: pointer;border: 1px solid transparent;"><a href="">NEW IN</a>
+        </div>
+        <div style="width: 6.5%;font-size: small;cursor: pointer;border: 1px solid transparent;"><a href="">TRENDS</a>
+        </div>
+        <div style="width: 6.5%;font-size: small;color: red;cursor: pointer;border: 1px solid transparent;"><a
+                href="">SALE</a></div>
+        <div style="width: 12%;font-size: small;cursor: pointer;border: 1px solid transparent;"><a href="">SHEIN X
+                DESIGNERS</a></div>
+        <div style="width: 8.5%;font-size: small;cursor: pointer;border: 1px solid transparent;"><a href="">CLOTHING</a>
+        </div>
+        <div style="width: 9.5%;font-size: small;cursor: pointer;border: 1px solid transparent;"><a href="">DRESSES</a>
+        </div>
+        <div style="width: 6.5%;font-size: small;cursor: pointer;border: 1px solid transparent;"><a href="">TOPS</a>
+        </div>
+        <div style="width: 12%;font-size: small;cursor: pointer;border: 1px solid transparent;"><a href="">LINGERIE &
+                LOUNGE</a></div>
+        <div style="width:9.5%;font-size: small;cursor: pointer;border: 1px solid transparent;"><a
+                href="">ACTIVEWEAR</a></div>
+        <div style="width: 10.5%;font-size: small;cursor: pointer;border: 1px solid transparent;"><a href="">SHOES &
+                ACCS</a></div>
+        <div style="width: 6.5%;font-size: small;cursor: pointer;border: 1px solid transparent;"><a href="">EXPLORE</a>
+        </div>
+        <div style="width: 15%;font-size: small;border: 1px solid transparent;"></div>
+        <div style="width: 25%;display: flex;">
+            <div style="width: 72%;"><input type="text" placeholder="Shoes" /></div>
+            <div style="width: 18%;background-color: black;color: white;height: 23.5px;cursor: pointer;"><i
+                    style="margin-top: 4px;" class="fas fa-search"></i>
+            </div>
+            <div style="width: 10%;"></div>
+        </div> -->
+
+
+    </div>
+    <div class="return">
+        <div>
+            <div style="font-size: 14px;border: 1px solid transparent;">FREE RETURNS</div>
+            <div style="border: 1px solid transparent;">*US only</div>
+        </div>
+
+
+        <div>
+            <div style="font-size: 14px;border: 1px solid transparent;">FREE STANDARD SHIPPING</div>
+            <div style="border: 1px solid transparent;">on order of $49+</div>
+        </div>
+
+
+        <div>
+            <div style="font-size: 14px;"><i class="fas fa-gift"
+                    style="color:red;border: 1px solid transparent;"></i>&nbsp;&nbsp;FREE GIFTS WITH
+                PURCHASE</div>
+            <div style="border: 1px solid transparent;">*Limited Quantities;Limited Time Only</div>
+        </div>
+        <div>
+            <div style="font-size: 14px;border: 1px solid transparent;">EXTRA 10% OFF</div>
+            <div style="border: 1px solid transparent;">your first order</div>
+        </div>
+    </div>
+
+    <div style="margin-left: 33px;cursor: pointer;margin-top: 15px;"><a href=""><img height="800px" width="98%"
+                src="https://img.ltwebstatic.com/images3_ach/2021/12/14/1639473146d048d2d1b8e6b5dd53b8554f3113db22.webp"></a>
+    </div>
+    <div class="category">
+        <div class="a"><a href=""><img width="100%" height="100%" src="photoo/dress.png"></a>
+        </div>
+        <div class="b"><a href=""><img width="100%" height="100%" src="photoo/tops.png"></a></div>
+        <div class="c"><a href=""><img width="100%" height="100%" src="photoo/sweat.png"></a></div>
+        <div class="d"><a href=""><img width="100%" height="100%" src="photoo/sweater.png"></a></div>
+        <div class="e"><a href=""><img width="100%" height="100%" src="photoo/pant.png"></a></div>
+        <div class="f"><a href=""><img width="100%" height="100%" src="photoo/oytwear.png"></a></div>
+        <div class="g"><a href=""><img width="100%" height="100%" src="photoo/denim.png"></a></div>
+        <div class="h"><a href=""><img width="100%" height="100%" src="photoo/inner.png"></a></div>
+        <div class="j"><a href=""><img width="100%" height="100%" src="photoo/jumpsuits.png"></a></div>
+        <div class="i"><a href=""><img width="100%" height="100%" src="photoo/shoes.png"></a></div>
+    </div>
+    <div class="third"></div>
+    <div class="fourth">
+        <div class="fourth_one">
+            <div class="fourth_one_one">FLASH SALE</div>
+            <div class="fourth_one_two">HURRY UP</div>
+        </div>
+        <div class="fourth_two">
+            <div><a href=""><img height="80%" width="100%"
+                        src="https://img.ltwebstatic.com/images3_pi/2021/03/16/1615874217f7f3b46befbba3c932ededa7ab4cf2e1_thumbnail_405x552.webp"></a>
+                <div style="background-color: white;font-size: 30px;padding: 10px;color: red;font-weight: bold;">US$4.50
+                </div>
+            </div>
+            <div><a href=""><img height="80%" width="100%"
+                        src="https://img.ltwebstatic.com/images3_pi/2021/07/20/1626779229e799c845ea7079a99f1ee62202a8eb85_thumbnail_405x552.webp"></a>
+                <div style="background-color: white;font-size: 30px;padding: 10px;color: red;font-weight: bold;">US$6.30
+                </div>
+            </div>
+            <div><a href=""><img height="80%" width="100%"
+                        src="https://img.ltwebstatic.com/images3_pi/2021/08/03/162798297172eb72bcb5820afaec53577168c901d3_thumbnail_405x552.webp"></a>
+                <div style="background-color: white;font-size: 30px;padding: 10px;color: red;font-weight: bold;">US$2.79
+                </div>
+            </div>
+            <div><a href=""><img height="80%" width="100%"
+                        src="https://img.ltwebstatic.com/images3_pi/2021/03/19/1616130608f248917c8d2af3e50ab615bc2dc56271_thumbnail_405x552.webp"></a>
+                <div style="background-color: white;font-size: 30px;padding: 10px;color: red;font-weight: bold;">US$9.20
+                </div>
+            </div>
+            <div><a href=""><img height="80%" width="100%"
+                        src="https://img.ltwebstatic.com/images3_pi/2021/11/10/1636544304df274c7b97e9296fc46b2a7e570e3cec_thumbnail_405x552.webp"></a>
+                <div style="background-color: white;font-size: 30px;padding: 10px;color: red;font-weight: bold;">
+                    US$12.60</div>
+            </div>
+            <div><a href=""><img height="80%" width="100%"
+                        src="https://img.ltwebstatic.com/images3_pi/2021/11/16/16370598237c762664f6aaaa2eb3ffb9e2520c976b_thumbnail_405x552.webp"></a>
+                <div style="background-color: white;font-size: 30px;padding: 10px;color: red;font-weight: bold;">
+                    US$20.00</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="five">
+        <div><a href=""><img width="100%" src="photoo/first.png"></a></div>
+        <div><a href=""><img width="100%" src="photoo/second.png"></a></div>
+        <div><a href=""><img width="100%" src="photoo/third.png"></a></div>
+    </div>
+    <div class="six">
+        <div style="width: 80%;">
+            <img src="photoo/headline.png">
+        </div>
+        <div style="width: 15%;margin-left: 40px;margin-top: 31px;height: 75px;background-color: #e10403;"><a href="">
+                <button>VIEW ALL</button></a>
+
+        </div>
+
+    </div>
+    <div class="seven">
+        <div style="margin-left: 20px;"><a href=""><img width="95%" height="90%"
+                    src="https://img.ltwebstatic.com/images3_ach/2021/12/14/163947320903960633e01c90f311ba8f2edb8d681f.jpg"></a>
+        </div>
+        <div style="margin-left: 20px;"><a href=""><img width="95%" height="90%"
+                    src="https://img.ltwebstatic.com/images3_ach/2021/12/13/163937453122c06c0a0030e7ba81a681c2c0d17901.gif"></a>
+        </div style="margin-left: 20px;">
+        <div style="margin-left: 20px;"><a href=""><img width="95%" height="90%"
+                    src="https://img.ltwebstatic.com/images3_ach/2021/12/09/1639048543df028e955b516cc8d847701b672f6233.jpg"></a>
+        </div>
+        <div style="margin-left: 20px;"><a href=""><img width="95%" height="90%"
+                    src="https://img.ltwebstatic.com/images3_ach/2021/12/13/16393745542e23c3abf3b3b9179c3d980b2b471440.png"></a>
+        </div>
+        <div style="margin-left: 20px;"><a href=""><img width="95%" height="90%"
+                    src="https://img.ltwebstatic.com/images3_ach/2021/12/06/16387709536030003be85b43a3bb4815257ab7240b.jpg"></a>
+        </div>
+    </div>
+    <h1 style="text-align: center;font-weight: bolder;">#dailydrops</h1>
+    <div style="width: 94%;margin: auto;height: 700px;border: 1px solid transparent;cursor: pointer;"><img width="100%"
+            height="100%"
+            src="https://img.ltwebstatic.com/images3_ach/2021/12/06/16387700116593bdade124c50e8e29bad378f3320c.webp">
+    </div>
+
+    <div class="eight">
+        <div>
+            <img width="100%" height="80%"
+                src="https://img.ltwebstatic.com/images3_pi/2021/11/11/163660984145defaf0488f4fb9995a242b3e58b675_thumbnail_405x552.jpg">
+            <div>
+                <a
+                    href="https://us.shein.com/Toddler-Girls-Lemon-Print-Open-Front-Girls-Kimono-p-6717777-cat-3772.html?scici=WomenHomePage~~ON_SliderItem,CN_daynew,HZ_0,HI_0~~11_1~~SliderItem~~~~">Toddler
+                    Girls Lenon Print Girls Kimono</a>
+                <h3>US$7.00</h3>
+            </div>
+        </div>
+        <div>
+            <img width="100%" height="80%"
+                src="https://img.ltwebstatic.com/images3_pi/2021/11/01/163572933094db9124aa85102e2285de92dc8c988e_thumbnail_405x552.jpg">
+            <div>
+                <a
+                    href="https://us.shein.com/Toddler-Boys-Plaid-Print-Double-Breasted-Overcoat-Without-Sweater-p-6469442-cat-3170.html?scici=WomenHomePage~~ON_SliderItem,CN_daynew,HZ_0,HI_0~~11_1~~SliderItem~~~~">Toddler
+                    Toddler boys plain print</a>
+                <h3>US$20.00</h3>
+            </div>
+        </div>
+        <div>
+            <img width="100%" height="80%"
+                src="https://img.ltwebstatic.com/images3_pi/2021/12/10/1639124899f8dbd873844688572975fb952947fa12_thumbnail_405x552.jpg">
+            <div>
+                <a
+                    href="https://us.shein.com/SHEIN-Toddler-Boys-Tartan-Print-Flap-Pocket-Overcoat-p-3401661-cat-3170.html?scici=WomenHomePage~~ON_SliderItem,CN_daynew,HZ_0,HI_0~~11_1~~SliderItem~~~~">Toddler
+                    SHEIN Toddler Boys Tartan Print </a>
+                <h3>US$14.00</h3>
+            </div>
+        </div>
+        <div>
+            <img width="100%" height="80%"
+                src="https://img.ltwebstatic.com/images3_pi/2021/11/08/163635704096a5a2355bd36e0f29ce68c38f76a287_thumbnail_405x552.jpg">
+            <div>
+                <a
+                    href="https://us.shein.com/Girls-Ruffle-Hem-Cover-Up-Skirt-p-6931742-cat-3767.html?scici=WomenHomePage~~ON_SliderItem,CN_daynew,HZ_0,HI_0~~11_1~~SliderItem~~~~">Toddler
+                    Girls Ruffle Hem Cover Up Skirt</a>
+                <h3>US$5.00</h3>
+            </div>
+        </div>
+        <div>
+            <img width="100%" height="80%"
+                src="https://img.ltwebstatic.com/images3_pi/2021/11/13/1636788281430ad3e21c5452ea9cb45bf9c9facd91_thumbnail_405x552.jpg">
+            <div>
+                <a
+                    href="https://us.shein.com/Girls-Mesh-Butterfly-Decor-Cover-Up-p-6698307-cat-3767.html?scici=WomenHomePage~~ON_SliderItem,CN_daynew,HZ_0,HI_0~~11_1~~SliderItem~~~~">Toddler
+                    Girls Mesh Butterfly Decor Cover</a>
+                <h3>US$3.00</h3>
+            </div>
+        </div>
+        <div>
+            <img width="100%" height="80%"
+                src="https://img.ltwebstatic.com/images3_pi/2021/11/19/163728793615817542c4e7ec796a933f17552e5bd2_thumbnail_405x552.jpg">
+            <div>
+                <a
+                    href="https://us.shein.com/Toddler-Girls-Knitted-Flounce-Hem-Cover-Up-p-7119617-cat-3756.html?scici=WomenHomePage~~ON_SliderItem,CN_daynew,HZ_0,HI_0~~11_1~~SliderItem~~~~">Toddler
+                    Girls Knitted Flounce Hem </a>
+                <h3>US$12.00</h3>
+            </div>
+        </div>
+
+    </div>
+    <p style="text-align: center;font-weight: bolder;font-size: 40px;">#SHEINcampaigns</p>
+    <div style="width: 94%;margin: auto;height: 700px;border: 1px solid transparent;cursor: pointer;">
+        <a target="_blank"
+            href="https://us.shein.com/trends/SHEIN-X-ARTIST-sc-00657933.html?ici=CCCSN=WomenHomePage_ON=SliderBanner_OI=3_CN=sheinx_TI=50001_aod=0_PS=13-2_ABT=0&scici=WomenHomePage~~ON_SliderBanner,CN_sheinx,HZ_0,HI_0~~13_2~~itemPicking_00657933~~~~&srctype=homepage&userpath=%3EWomenHomePage%3ESHEIN-X-ARTIST"><img
+                width="100%" height="100%"
+                src="https://img.ltwebstatic.com/images3_ach/2021/11/29/1638170370c25780c00604ea59038ff211f1c0e58c.jpg"></a>
+    </div>
+    <div class="last_image">
+        <a href="https://us.shein.com/campaign/motfcashmerewool?ici=CCCSN%3DWomenHomePage_ON%3DSliderBanner_OI%3D3_CN%3Dfest_TI%3D50001_aod%3D0_PS%3D14-7_ABT%3D0&scici=WomenHomePage~~ON_SliderBanner%2CCN_fest%2CHZ_0%2CHI_0~~14_7~~activity_motfcashmerewool~~~~"
+            target="_blank"><img width="100%" height="100%"
+                src="https://img.ltwebstatic.com/images3_ach/2021/11/22/16375618375f1ee3e7cc23ac8fce96f192d00bf168.jpg"></a>
+    </div>
+    <p style="text-align: center;font-weight: bolder;font-size: 50px;">Style Gallery</p>
+    <div class="gallery">
+        <div><a href="https://us.shein.com/SHEIN-Lantern-Sleeve-Button-Front-PU-Leather-Bodysuit-p-2765579-cat-1882.html"
+                taget="_blank"><img height="100%" width="100%"
+                    src="https://img.ltwebstatic.com/images3_app/2021/09/27/1632706862d4da2dc920571636253aebf239a6691d.webp"></a>
+        </div>
+        <div><a href="https://us.shein.com/SHEIN-Ribbed-Knit-Split-Thigh-Belted-Tank-Dress-p-3084197-cat-1727.html"
+                taget="_blank"><img height="100%" width="100%"
+                    src="https://img.ltwebstatic.com/images3_app/2021/09/29/1632879641198b89c8ffbc6e3318e86131502ef654.webp"></a>
+        </div>
+        <div><a href="https://img.ltwebstatic.com/images3_pi/2021/03/15/161577863906a2fd7b0f8261b589d5a590e31942ff_thumbnail_900x.webp"
+                taget="_blank"><img height="100%" width="100%"
+                    src="https://img.ltwebstatic.com/images3_app/2021/09/29/16328797246ddada7e1358fb85b031046cd83d00a2.webp"></a>
+        </div>
+        <div><a href="https://us.shein.com/Button-Front-Drop-Shoulder-Shirt-Romper-Without-Belt-p-2256732-cat-1860.html"
+                taget="_blank"><img height="100%" width="100%"
+                    src="https://img.ltwebstatic.com/images3_app/2021/09/30/1632966116b15c70d79cc5dc7044beee4eb72505a5.webp"></a>
+        </div>
+        <div><a href="https://us.shein.com/SHEIN-Zipper-Fly-Palazzo-PU-Pants-p-1849420-cat-1740.html"
+                taget="_blank"><img height="100%" width="100%"
+                    src="https://img.ltwebstatic.com/images3_app/2021/09/29/1632879725fdbb846aad41038a9e376730f56f0355.webp"></a>
+        </div>
+    </div>
+    <div class="dibba">
+        <div style="width: 250px;"><a href="https://us.shein.com/member-image-list.html?labelId=2411&categoryId=67"
+                target="_blank"><button
+                    style="background-color:#2d4659;font-size:medium;border: 1px solid transparent;">Fall
+                    Style</button></a></div>
+        <div style="width: 250px;"><a href="https://us.shein.com/member-image-list.html?labelId=2203&categoryId=67"
+                target="_blank"><button
+                    style="background-color:#954963;font-size:medium;border: 1px solid transparent;">Cozy
+                    Style</button></a></div>
+        <div style="width: 250px;"><a href="https://us.shein.com/member-image-list.html?labelId=1258&categoryId=62"
+                target="_blank"><button style="background-color:
+                    #d7c9bd;font-size:medium;border: 1px solid transparent;">Girls
+                    Outing</button></a></div>
+        <div style="width: 250px;"><a href="https://us.shein.com/member-image-list.html?labelId=1442&categoryId=75"
+                target="_blank"><button
+                    style="background-color:#dccad7;font-size:medium;border: 1px solid transparent;">Fashion
+                </button></a></div>
+        <div style="width: 250px;"><a href="https://us.shein.com/member-image-list.html?labelId=994&categoryId=67"
+                target="_blank"><button
+                    style="background-color:#ca9e82;font-size:medium;border: 1px solid transparent;">Elegant
+                    Lady</button></a></div>
+        <div style="width: 250px;"><a href="https://us.shein.com/member-image-list.html?labelId=1355&categoryId=67"
+                target="_blank"><button style="background-color:
+                    #d3c4af;font-size:medium;border: 1px solid transparent;">Embrace
+                    Casual</button></a>
+        </div>
+        <div style="width: 250px;"><a href="https://us.shein.com/member-image-list.html?labelId=2430&categoryId=70"
+                target="_blank"><button
+                    style="background-color:#dea6a7;font-size:medium;border: 1px solid transparent;">Curve
+                    Beauty</button></a></div>
+        <div><a href="https://us.shein.com/member-image-list.html?labelId=1102&categoryId=62" target="_blank"><button
+                    style="background-color:#2d4659;font-size:medium;border: 1px solid transparent;">Date</button></a>
+        </div>
+        <div style="width: 250px;"><a href="https://us.shein.com/member-image-list.html?labelId=1442&categoryId=75"
+                target="_blank"><button
+                    style="background-color:#8f7b74;font-size:medium;border: 1px solid transparent;">Street
+                    Style</button></a></div>
+        <div style="width: 250px;"><a href="https://us.shein.com/member-image-list.html?labelId=1311&categoryId=64"
+                target="_blank"><button
+                    style="background-color:#50566d;font-size:medium;border: 1px solid transparent;">Denim
+                    Guide</button></a></div>
+        <div style="width: 250px;"><a href="https://us.shein.com/member-image-list.html?labelId=1485&categoryId=75"
+                target="_blank"><button
+                    style="background-color:#2d4659;font-size:medium;border: 1px solid transparent;">Fashion
+                    secret</button></a>
+        </div>
+    </div>
+    <!-- <div class="info">
+        <div class="info1">
+            <div style="margin-left: 80px;line-height: 40px;">
+                <p style="font-weight: bolder;font-size: large;line-height: 55px;">COMPANY INFO</p>
+                <a href="" target="_blank">About SHEIN</a><br>
+                <a href="" target="_blank">Social Responsibility</a><br>
+                <a href="" target="_blank">Affliate</a><br>
+                <a href="" target="_blank">Fashion Blogger</a><br>
+                <a href="" target="_blank;">Supply Chain</a><br>
+            </div>
+            <div style="margin-left: 80px;line-height: 40px;">
+                <p style="font-weight: bolder;font-size: large;line-height: 55px;">HELP & SUPPORT</p>
+                <a href="" target="_blank">Shipping info</a><br>
+                <a href="" target="_blank">RETURNS</a><br>
+                <a href="" target="_blank">How to order</a><br>
+                <a href="" target="_blank">How to Track</a><br>
+                <a href="" target="_blank;">Size guide</a><br>
+            </div>
+            <div style="margin-left: 80px;line-height: 40px;">
+                <p style="font-weight: bolder;font-size: large;line-height: 55px;">CUSTOMER CARE</p>
+                <a href="" target="_blank">Contact Us</a><br>
+                <a href="" target="_blank">Payment & Tax</a><br>
+                <a href="" target="_blank">Bonus point</a><br>
+                <a href="" target="_blank">Klarna</a><br>
+                <a href="" target="_blank;">After pay</a><br>
+                <a href="" target="_blank;">Zip</a><br>
+                <a href="" target="_blank;">Recall Notice</a><br>
+            </div>
+        </div>
+        <div class="info2">
+            <p style="font-size: larger;font-weight: 700;display: flex;">FIND US ON
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOWNLOAD
+                SHEIN APP TO SAVE MORE!</p>
+            <div class="logo">
+                <div><a href=""><i style="font-size: 30px;" class="fab fa-facebook-f"></i></a></div>
+                <div><a href=""><i style="font-size: 30px;color: #f55043;" class="fab fa-instagram"></i></a></div>
+                <div><a href=""><i style="font-size: 30px;color:#5da9dd" class="fab fa-twitter"></i></a></div>
+                <div><a href=""><i style="font-size: 30px;color: red;" class="fab fa-youtube"></i></a></div>
+                <div><a href=""><i style="font-size: 30px;" class="fab fa-pinterest"></i></a></div>
+                <div><a href=""><i style="font-size: 30px;color:rgb(141, 141, 46)" class="fab fa-snapchat"></i></a>
+                </div>
+                <div><a href=""><i style="font-size: 30px;color: black;" class="fab fa-tiktok"></i></a></div>
+
+            </div>
+            <div class="apple">
+                <div><a href=""><i style="font-size: 45px;color: black;" class="fab fa-apple"></i></a></div>
+                <div><a href=""><i style="font-size: 45px;color: green;" class="fab fa-android"></i></a></div>
+            </div>
+            <p style="font-weight: 700;font-size: medium;">SIGN UP FOR SHEIN STYLE NEWS</p>
+            <input style="font-size: larger;width: 600px;" type="password" placeholder="Your Email Address">
+            <div
+                style="width:100px ;height:30px ;border: 1px solid red;padding:5px;background-color: red;color: white;cursor: pointer;">
+                SUBSCRIBE
+            </div>
+            <br>
+            <br>
+            <p style="font-weight: 700;">WE ACCEPT</p>
+            <div class="payment">
+                <div><a href=""><i style="font-size: 32px;color:#00297a" class="fab fa-cc-paypal"></i></a></div>
+                <div><a href=""><i style="font-size: 32px;color: blue;" class="fab fa-cc-visa"></i></a></div>
+                <div><a href=""><i style="font-size: 32px;color:
+                    #c60000" class="fab fa-cc-mastercard"></i></a></div>
+                <div><a href=""><i style="font-size: 32px;color: #006fcf;" class="fab fa-cc-amex"></i></a></div>
+                <div><a href=""><i style="font-size: 32px" class="fab fa-amazon-pay"></i></a></div>
+            </div>
+
+
+        </div>
+
+    </div> -->
+
+</body>
+
+</html>
